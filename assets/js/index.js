@@ -7,7 +7,7 @@ var firebaseConfig = {
     messagingSenderId: "998604005557",
     appId: "1:998604005557:web:0f66e992212880a9121efc"
   };
-  // Initialize Firebase
+  // Initializindexe Firebase
   firebase.initializeApp(firebaseConfig);
 
   firebase.auth.Auth.Persistence.LOCAL;
