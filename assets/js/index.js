@@ -129,8 +129,8 @@ $("#btn-update").click(function(){
         var errorCode = error.code;
         var errorMessage = error.message;
 
-        console.log("ErrorCode " + errorcode);
-        console.log("Error Message " + errormessage);
+        console.log("ErrorCode " + errorCode);
+        console.log("Error Message " + errorMessage);
 
         window.alert(errorMessage);
       }
