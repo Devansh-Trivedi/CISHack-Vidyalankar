@@ -301,7 +301,7 @@
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="MainPage.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span>Shikan</span>
       </a>
@@ -334,7 +334,7 @@
           <li><a class="nav-link scrollto" href="#contact">Blog</a></li>
           <li><a class="nav-link scrollto" href="#contact">FAQ's</a></li> -->
           <li><a class="nav-link scrollto" href="MainPage.html#contact">Contact Us</a></li>
-          <li><a class="getstarted scrollto" id="btn-logout" href="#">Logout</a></li>
+          <!-- <li><a class="getstarted scrollto" id="btn-logout" href="#">Logout</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -356,7 +356,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Get daily updates by subscribing to our news letter.</p>
           </div>
           <div class="col-lg-6">
             <form action="" method="post">
@@ -425,16 +425,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-       
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer> -->
+
 
   <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -448,7 +439,19 @@
 
   <!-- <script src="assets/js/main.js"></script> -->
 
-
+  <script>
+			
+    $("#btn-logout").click(function(){
+        firebase.auth().signOut();
+      });
+        firebase.auth().onAuthStateChanged(function(user)
+        {
+      if(!user)
+      {
+                window.location.href = "signin.html";
+            }
+        });
+    </script>
   <script>
     firebase.initializeApp(firebaseConfig);
   
