@@ -1247,7 +1247,19 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
+  <script>
+			
+    $("#btn-logout").click(function(){
+        firebase.auth().signOut();
+      });
+        firebase.auth().onAuthStateChanged(function(user)
+        {
+      if(!user)
+      {
+                window.location.href = "signin.html";
+            }
+        });
+      </script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
